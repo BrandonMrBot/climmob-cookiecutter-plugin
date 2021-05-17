@@ -19,7 +19,7 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
         custom_map = []
         """custom_map = [
             u.addRoute(
-                "plugin_mypublicview", "/mypublicview", MyPublicView, "public.jinja2"
+                "plugin_mypublicview", "/mypublicview", MyPublicView, "json"
             ),
             u.addRoute(
                 "plugin_myprivateview",

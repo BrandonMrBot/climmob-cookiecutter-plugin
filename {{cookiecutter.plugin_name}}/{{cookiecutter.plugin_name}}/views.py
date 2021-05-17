@@ -12,4 +12,4 @@ class MyPrivateView(u.privateView):
 
 	def processView(self):
 		self.returnRawViewResult = True
-		return {"status":200,"message":"ok"}
+		return {"message":"Hello word"}
