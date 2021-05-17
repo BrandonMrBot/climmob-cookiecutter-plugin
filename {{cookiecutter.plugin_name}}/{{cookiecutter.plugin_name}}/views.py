@@ -11,5 +11,5 @@ class MyPrivateView(u.privateView):
 		self.checkCrossPost = False
 
 	def processView(self):
-		self.returnRawViewResult = True
+		
 		return {"activeUser": self.user,"message":"Hello word"}
