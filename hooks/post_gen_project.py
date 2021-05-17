@@ -11,14 +11,14 @@ def display_actions_message():
     msg = dedent(
         """
         %(separator)s
-        This is a scaffolding of a FormShare plugin. You can use it
+        This is a scaffolding of a ClimMob plugin. You can use it
         to create complex plugins.
         %(separator)s
 
-        To make FormShare to run this plugin do:
+        To make ClimMob to run this plugin do:
             
-        Activate the FormShare environment .
-            . /path/to/FormShare/bin/activate
+        Activate the ClimMob environment .
+            . /path/to/ClimMob/bin/activate
             
         Change directory into your newly created plugin.
             cd {{ cookiecutter.plugin_name }}
@@ -26,12 +26,12 @@ def display_actions_message():
         Build the plugin
             python setup.py develop
 
-        Add the plugin to the FormShare list of plugins by editing the line
-            #formshare.plugins = examplePlugin
-            formshare.plugins = {{ cookiecutter.plugin_name }}
+        Add the plugin to the ClimMob list of plugins by editing the line
+            #climmob.plugins = examplePlugin
+            climmob.plugins = {{ cookiecutter.plugin_name }}
         
 
-        Run FormShare again
+        Run ClimMob again
         """
         % vars
     )

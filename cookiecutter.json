@@ -1,5 +1,5 @@
 {
-  "plugin_description": "A FormShare plugin",
+  "plugin_description": "A ClimMob plugin",
   "plugin_name": "{{cookiecutter.plugin_description.lower().strip().replace(' ', '_').replace(':', '_').replace('-', '_').replace('!', '_')}}",
   "plugin_hasCeleryTasks": "N",
   "plugin_version": "1.0",
