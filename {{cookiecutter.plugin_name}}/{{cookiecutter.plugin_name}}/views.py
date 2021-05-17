@@ -1,11 +1,15 @@
-from climmob.views.classes import privateView, publicView
+import climmob.plugins.utilities as u
 
-class MyPublicView(publicView):
-    def process_view(self):
-        return {"status":200,"message":"ok"}
+class MyPublicView(u.publicView):
+	def process_view(self):
+		return {"status":200,"message":"ok"}
 
 
-class MyPrivateView(privateView):
-    def process_view(self):
+class MyPrivateView(u.privateView):
+	def __init__(self, request):
+		u.privateView.__init__(self, request)
+		self.checkCrossPost = False
 
-    	return {"status":200,"message":"ok"}
+	def processView(self):
+		self.returnRawViewResult = True
+		return {"status":200,"message":"ok"}
