@@ -12,6 +12,6 @@ Requirements
 Usage
 -----
 
-1. Generate a FormShare plugin project, following the prompts from the command
+1. Generate a ClimMob plugin project, following the prompts from the command
     ```sh
     $ cookiecutter https://github.com/BrandonMrBot/climmob-cookiecutter-plugin.git
