@@ -19,7 +19,7 @@ $ cd {{ cookiecutter.plugin_name }}
 $ python setup.py develop
 ```
 
-- Add the plugin to the CliMMob list of plugins by editing the following line in development.ini or production.ini
+- Add the plugin to the ClimMob list of plugins by editing the following line in development.ini or production.ini
 ```
     #climmob.plugins = examplePlugin
     climmob.plugins = {{ cookiecutter.plugin_name }}
