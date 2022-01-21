@@ -17,17 +17,17 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
     def after_mapping(self, config):
         # We add here a new route /json that returns a JSON
         custom_map = []
-        """custom_map = [
-            u.addRoute(
-                "plugin_mypublicview", "/mypublicview", MyPublicView, "json"
+        custom_map = [
+            u.add_route(
+                "plugin_mypublicview", "/mypublicview", MyPublicView, "public.jinja2"
             ),
-            u.addRoute(
+            u.add_route(
                 "plugin_myprivateview",
                 "/user/{userid}/myprivateview",
                 MyPrivateView,
                 "private.jinja2",
             ),
-        ]"""
+        ]
 
         return custom_map
 

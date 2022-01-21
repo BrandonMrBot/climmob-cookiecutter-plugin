@@ -1,10 +1,12 @@
 {% if cookiecutter.plugin_hasCeleryTasks == 'Y' or cookiecutter.plugin_hasCeleryTasks == 'y' -%}
 from climmob.config.celery_app import celeryApp
-from climmob.config.celery_class import CeleryTask
+from climmob.plugins.utilities import climmobCeleryTask
 import time
 
 
-@celeryApp.task(base=CeleryTask)
+@celeryApp.task(
+    bind=True, base=climmobCeleryTask, soft_time_limit=7200, time_limit=7200
+)
 def plugin_task():
     time.sleep(
         30

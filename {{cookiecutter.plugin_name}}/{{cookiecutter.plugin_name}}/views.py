@@ -2,7 +2,8 @@ import climmob.plugins.utilities as u
 
 class MyPublicView(u.publicView):
 	def process_view(self):
-		return {"status":200,"message":"ok"}
+
+		return {}
 
 
 class MyPrivateView(u.privateView):
