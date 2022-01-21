@@ -4,9 +4,9 @@
 Getting Started
 ---------------
 
-- Activate the FormShare environment.
+- Activate the ClimMob environment.
 ```
-$ . ./path/to/FormShare/bin/activate
+$ . ./path/to/ClimMob/bin/activate
 ```
 
 - Change directory into your newly created plugin.
@@ -19,10 +19,10 @@ $ cd {{ cookiecutter.plugin_name }}
 $ python setup.py develop
 ```
 
-- Add the plugin to the FormShare list of plugins by editing the following line in development.ini or production.ini
+- Add the plugin to the ClimMob list of plugins by editing the following line in development.ini or production.ini
 ```
-    #formshare.plugins = examplePlugin
-    formshare.plugins = {{ cookiecutter.plugin_name }}
+    #climmob.plugins = examplePlugin
+    climmob.plugins = {{ cookiecutter.plugin_name }}
 ```
 
-- Run FormShare again
+- Run ClimMob again
