@@ -1,4 +1,7 @@
 import climmob.plugins.utilities as u
+from climmob.processes import (
+	getActiveProject
+)
 
 class MyPublicView(u.publicView):
 	def process_view(self):
@@ -12,5 +15,7 @@ class MyPrivateView(u.privateView):
 		self.checkCrossPost = False
 
 	def processView(self):
+
+		activeProject = getActiveProject(self.user.login, self.request)
 		
-		return {"activeUser": self.user,"message":"Hello word"}
+		return {"activeUser": self.user, "activeProject": activeProject,"message":"Hello word"}
