@@ -32,7 +32,7 @@ def add_{{ cookiecutter.plugin_name }}_tables(metadata):
         Column("example_url", MEDIUMTEXT(collation="utf8mb4_unicode_ci")),
         Column("example_file", String(64)),
         Column("example_mimetype", String(120)),
-        Column("example_user", ForeignKey("fsuser.user_id"), nullable=False, index=True),
+        Column("example_user", ForeignKey("user.user_name"), nullable=False, index=True),
         Column("extras", MEDIUMTEXT(collation="utf8mb4_unicode_ci")),
         Column("tags", MEDIUMTEXT(collation="utf8mb4_unicode_ci")),
         mysql_charset="utf8mb4",
