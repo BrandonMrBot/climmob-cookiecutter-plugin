@@ -11,6 +11,7 @@ from sqlalchemy import (
 
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 
+
 class ExampleTable(Base):
     __tablename__ = "{{ cookiecutter.plugin_name }}_example"
 
