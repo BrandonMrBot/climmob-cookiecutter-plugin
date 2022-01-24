@@ -6,7 +6,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from climmob.models.meta import Base
-from {{ cookiecutter.plugin_name }}.orm.tables import add_{{ cookiecutter.plugin_name }}_tables
+from {{ cookiecutter.plugin_name }} import orm
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -21,7 +21,6 @@ fileConfig(config.config_file_name)
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
-add_{{ cookiecutter.plugin_name }}_tables(target_metadata)
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

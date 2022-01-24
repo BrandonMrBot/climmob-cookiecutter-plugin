@@ -19,6 +19,16 @@ $ cd {{ cookiecutter.plugin_name }}
 $ python setup.py develop
 ```
 
+- Alembic configuration for extra tables
+```
+$ mv alembic.example.ini alembic.ini
+```
+- Edit the alembic.ini an replace sqlalchemy.url with the one in the FormShare ini file
+```    
+$ alembic revision --autogenerate -m "Initial version"
+$ alembic upgrade head
+```
+
 - Add the plugin to the ClimMob list of plugins by editing the following line in development.ini or production.ini
 ```
     #climmob.plugins = examplePlugin
