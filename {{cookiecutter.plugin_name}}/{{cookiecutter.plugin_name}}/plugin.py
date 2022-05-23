@@ -49,3 +49,7 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
     def update_extendable_tables(self, tables_allowed):
         tables_allowed.append("{{ cookiecutter.plugin_name }}_example")
         return tables_allowed
+
+    def update_extendable_modules(self, modules_allowed):
+        modules_allowed.append("{{ cookiecutter.plugin_name }}.orm.{{ cookiecutter.plugin_name }}")
+        return modules_allowed
